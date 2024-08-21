@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+.p-toast {
+  @apply max-w-[80%];
+}
+.p-toast.p-toast-top-right,
+.p-toast.p-toast-bottom-right {
+  @apply left-auto right-[10px];
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Inter';
+  font-weight: 700;
+}
+html {
+  font-size: 100%;
+} /* 16px */
+h1 {
+  font-size: 36.36px;
+}
+h2 {
+  font-size: 30.56px;
+}
+h3 {
+  font-size: 24.92px;
+}
+h4 {
+  font-size: 22.48px;
+}
+h5 {
+  font-size: 19.28px;
+}
+small {
+  font-size: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  --main-blue: #3a33ff;
+  --main-background: #e5e7eb;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+.mbl {
+  color: var(--main-blue);
+}
+
+/** slide-animation **/
+
+.slide-fade-enter-active {
+  transition: all 0.2s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(100%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.main-button {
+  @apply bg-accent-600 border-4 border-accent-600 p-3 text-background-50;
+}
+.p-stepper-number {
+  @apply bg-accent-600 text-background-50;
+}
